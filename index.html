@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Aposta número</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__conteudo" id="conteudo-jogo">
+            <div class="container__imagem">
+                <img src="img/logo-icon.png" alt="Logo" class="imagem-logo">
+            </div>
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Aposte qual é o número secreto</h1>
+                    <p id="mensagem-tentativas" class="texto__paragrafo">Tentativas restantes: 5</p>
+                </div>
+                <input type="number" min="1" max="10" class="container__input" placeholder="Digite seu número?">
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Aposte</button>
+                    <button id="reiniciar" class="container__botao" style="display: none;" disabled>Vamos de novo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Will feliz e mensagem adicional -->
+        <div class="container__will-feliz" id="will-feliz" style="display: none;">
+            <img src="img/will-feliz.jpg" alt="Will feliz" class="imagem-will-feliz-grande">
+            <p class="texto__feliz-grande" id="mensagem-vitoria"></p>
+            <button id="botao-reiniciar-feliz" class="container__botao">Vamos de novo</button>
+        </div>
+        
+        <!-- "Ta de hack" para acerto em 1 tentativa -->
+        <div class="container__ta-de-hack" id="ta-de-hack" style="display: none;">
+            <img src="img/ta de hack.jpg" alt="Ta de hack" class="imagem-ta-de-hack-grande">
+            <p class="texto__hack-grande" id="mensagem-hack"></p>
+            <button id="botao-reiniciar-hack" class="container__botao">Vamos de novo</button>
+        </div>
+        
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>
