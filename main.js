@@ -42,8 +42,7 @@ function verificarChute() {
         return;  // Não permitir mais tentativas
     }
 
-    tentativas++;
-    atualizarTentativasRestantes();  // Atualizar o número de tentativas restantes
+
 
     if (guess == secret_number) {
         document.getElementById('conteudo-jogo').style.display = 'none';
@@ -64,6 +63,8 @@ function verificarChute() {
         } else {
             exibeTextoTag('p', 'Não pô, o número é menor');
         }
+        tentativas++;
+        atualizarTentativasRestantes();  // Atualizar o número de tentativas restantes
     }
 
     limpainput();
